@@ -109,6 +109,8 @@ app.post('/', function(req, res){
 
 });
 
+mongoose.set('useFindAndModify', false);
+
 app.post("/delete", function(req, res) {
     const checkItemId = req.body.checkbox;
     const listName = req.body.listName;
