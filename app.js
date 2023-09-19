@@ -76,7 +76,7 @@ app.get('/:customListName', function(req, res){
                 foundList.save();
                 res.redirect("/" + customListName);
             } else {
-            res.render("list", {listTitle: foundList.name, newlistItem: foundList.items })
+                res.render("list", {listTitle: foundList.name, newlistItem: foundList.items })
             }
                 
         }
@@ -84,7 +84,7 @@ app.get('/:customListName', function(req, res){
 
 });
 
-app.post('/', function(req, res){
+app.post('/', function(req, res) {
 
     let itemName = req.body.newItem;
     let listName = req.body.list;
